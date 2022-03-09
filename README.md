@@ -16,3 +16,9 @@ This is a multi-stage Docker file that will perform the following functions:
 2.  Build the image using this docker command:  ```docker build -t caddy .```
 3.  Run the image using this docker command:  ```docker run -p 8080:2015 -d --name caddy caddy```
 
+# Links
+
+Caddy:  https://github.com/caddyserver/caddy
+Caddy Getting Started:  https://caddyserver.com/docs/getting-started
+Go:   https://go.dev/dl/
+
