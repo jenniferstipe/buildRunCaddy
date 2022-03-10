@@ -13,14 +13,14 @@ Dockerfile.light is a single step Docker file that uses the caddy docker image t
 # Usage for full build (Dockerfile)
 
 1.  Clone this repository and change to the repo directory.
-2.  Build the image using this docker command:  ```docker build -t caddy .```  By default, this command will use v2.4.6 of Caddy, but if a different version is preferred use this syntax:  ```docker build -t caddy --build-arg=v#.#.# .```
+2.  Build the image using this docker command:  ```docker build -t caddy .```  By default, this command will use v2.4.6 of Caddy, but if a different version is preferred use this syntax:  ```docker build -t caddy --build-arg CADDY_VERSION=v#.#.# .```
 3.  Run the image using this docker command:  ```docker run -p 8080:2015 -d --name caddy caddy```
 4.  Note:  Please stop and delete this container if the light version is to be built/run since they both use port 8080.
 
 # Usage for light build (Dockerfile.light)
 
 1.  Clone this repository and change to the repo directory.
-2.  Build the image using this docker command:  ```docker build -f Dockerfile.light -t lightcaddy .```  By default, this command will use v2.4.6 of Caddy, but if a different version is preferred use this syntax:  ```docker build -t lightcaddy --build-arg=#.#.# .```
+2.  Build the image using this docker command:  ```docker build -f Dockerfile.light -t lightcaddy .```  By default, this command will use v2.4.6 of Caddy, but if a different version is preferred use this syntax:  ```docker build -t lightcaddy --build-arg CADDY_VERSION=#.#.# .```
 3.  Run the image using this docker command:  ```docker run -p 8080:2015 -d --name lightcaddy lightcaddy```
 4.  Note:  Please stop and delete this container if the full version is to be built/run since they both use port 8080.
 
