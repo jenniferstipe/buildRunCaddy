@@ -30,11 +30,4 @@ RUN /usr/local/go/bin/go build
 FROM build AS run
 WORKDIR /app/caddy/cmd/caddy/
 COPY caddy.json /app/caddy/caddy.json
-RUN cd /app/caddy/cmd/caddy/
-RUN ls -ltr
-#RUN /app/caddy/cmd/caddy/caddy start -config caddy.json
-#ENTRYPOINT ["/app/caddy/cmd/caddy/caddy" , "start --config caddy.json"]
-#ENTRYPOINT ["/app/caddy/cmd/caddy/caddy" , "start -config /app/caddy/caddy.json"]
-#ENTRYPOINT ["/app/caddy/cmd/caddy/caddy" , "start", "-config", "/app/caddy/caddy.json"]
 ENTRYPOINT ["/app/caddy/cmd/caddy/caddy" , "run", "-config", "/app/caddy/caddy.json"]
-#ENTRYPOINT ["/app/caddy/cmd/caddy/caddy"]

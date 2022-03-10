@@ -1,0 +1,4 @@
+# Use caddy docker image and copy Caddy file
+ARG CADDY_VERSION=${CADDY_VERSION:-v2.4.6}
+FROM caddy:$CADDY_VERSION
+COPY Caddyfile /etc/caddy/Caddyfile
