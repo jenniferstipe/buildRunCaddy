@@ -13,12 +13,18 @@ This is a multi-stage Docker file that will perform the following functions:
 # Usage
 
 1.  Clone this repository and change to the repo directory.
-2.  Build the image using this docker command:  ```docker build -t caddy .```
+2.  Build the image using this docker command:  ```docker build -t caddy .```  By default, this command will use v2.4.6 of Caddy, but if a different version is preferred use this syntax:  ```docker build -t caddy --build-arg={v#.#.#} .```
 3.  Run the image using this docker command:  ```docker run -p 8080:2015 -d --name caddy caddy```
+
+# Test
+
+1.  Verify the server is responding via this curl command:  ```curl localhost:8080```
 
 # Links
 
 Caddy:  https://github.com/caddyserver/caddy
+
 Caddy Getting Started:  https://caddyserver.com/docs/getting-started
+
 Go:   https://go.dev/dl/
 
