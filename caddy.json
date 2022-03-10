@@ -8,7 +8,7 @@
 						{
 							"handle": [{
 								"handler": "static_response",
-								"body": "Hello, world!"
+								"body": "caddy - Hello, world!"
 							}]
 						}
 					]
