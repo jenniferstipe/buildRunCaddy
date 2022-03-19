@@ -4,9 +4,9 @@
 FROM ubuntu AS git
 ARG CADDY_VERSION
 ENV CADDY_VERSION=${CADDY_VERSION:-v2.4.6}
-RUN apt update
-RUN apt install -y git
-RUN apt install -y wget
+RUN apt-get update
+RUN apt-get install -y git
+RUN apt-get install -y wget
 RUN mkdir /app
 WORKDIR /app/
 RUN git clone --branch $CADDY_VERSION https://github.com/caddyserver/caddy.git /app/caddy
