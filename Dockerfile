@@ -4,9 +4,10 @@
 FROM ubuntu AS git
 ARG CADDY_VERSION
 ENV CADDY_VERSION=${CADDY_VERSION:-v2.4.6}
-RUN apt-get update
-RUN apt-get install -y git
-RUN apt-get install -y wget
+# updated this after reading more about efficient Dockerfiles at this link:  https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+RUN apt-get update && apt-get install -y \
+    git \
+    wget
 RUN mkdir /app
 WORKDIR /app/
 RUN git clone --branch $CADDY_VERSION https://github.com/caddyserver/caddy.git /app/caddy
