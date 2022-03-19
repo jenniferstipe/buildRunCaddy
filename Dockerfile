@@ -7,7 +7,8 @@ ENV CADDY_VERSION=${CADDY_VERSION:-v2.4.6}
 # updated this after reading more about efficient Dockerfiles at this link:  https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 RUN apt-get update && apt-get install -y \
     git \
-    wget
+    wget \
+&& rm -rf /var/lib/apt/lists/*    
 RUN mkdir /app
 WORKDIR /app/
 RUN git clone --branch $CADDY_VERSION https://github.com/caddyserver/caddy.git /app/caddy
