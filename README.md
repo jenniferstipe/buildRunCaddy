@@ -1,14 +1,14 @@
 # Overview
 
-Dockerfile is a multi-stage Docker file that will perform the following functions:
+Dockerfile will perform the following functions:
 
-1. Create an ubuntu container, run apt update, then install git and wget.
+1. Create an ubuntu 20.4 container, run apt update, then install git and wget.
 2. Check out the most recent version of Caddy
 3. Download and configure the most recent version (as of today) of Go
 4. Use the "go build" command to build Caddy
 5. Run caddy with a custom config JSON file on Docker port 8080 (port 2015 internally)
 
-Dockerfile.light is a single step Docker file that uses the caddy docker image to run caddy with a Caddyfile.
+Dockerfile.light uses the caddy docker image to run caddy with a Caddyfile.
 
 # Usage for full build (Dockerfile)
 
